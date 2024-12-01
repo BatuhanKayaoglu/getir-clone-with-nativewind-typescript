@@ -1,24 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, Text, View } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import BottomNavigator from './src/navigators/BottomNavigator';
-
+import AppNavigator from './src/navigators/AppNavigator';
 
 const Stack = createNativeStackNavigator();
 
-
-export default function App() {
+const App: React.FC = () => {
   return (
-    <SafeAreaView style={{ flex: 1, marginTop: 30 }}>
-      <StatusBar style="auto" />
-      <NavigationContainer>
-        <BottomNavigator />
-      </NavigationContainer>
-    </SafeAreaView>
-
+    <NavigationContainer>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar style="auto" />
+        <AppNavigator />
+      </SafeAreaView>
+    </NavigationContainer>
   );
-}
+};
 
+export default App;

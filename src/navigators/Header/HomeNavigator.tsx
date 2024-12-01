@@ -9,18 +9,16 @@ export default function HomeNavigator() {
     const Stack = createNativeStackNavigator();
 
     return (
-        <NavigationContainer independent={true}>
-            <Stack.Navigator>
-                <Stack.Screen name="home" component={HomeScreen} options={{
-                    headerStyle: { backgroundColor: '#5C3EBC', },
-                    headerTitleAlign: 'center',
-                    headerTitle: () => (
-                        <View>
-                            <Image resizeMode='contain' className='w-16 h-8' source={require("../../../assets/logo.png")} />
-                        </View>
-                    )
-                }} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator>
+            <Stack.Screen name="home" component={HomeScreen} options={{
+                headerStyle: { backgroundColor: '#5C3EBC', },
+                headerTitleAlign: 'center',
+                headerTitle: () => (
+                    <View>
+                        <Image resizeMode='contain' className='w-16 h-8' source={require("../../../assets/logo.png")} />
+                    </View>
+                )
+            }} />
+        </Stack.Navigator>
     )
 }

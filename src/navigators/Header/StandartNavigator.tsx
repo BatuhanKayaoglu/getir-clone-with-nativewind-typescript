@@ -34,7 +34,7 @@ export default function StandartNavigator({ component, name, logo, textTitle }: 
                         </View>
                     ),
                     headerRight: () => (
-                        <TouchableOpacity onPress={() => navigation.navigate('Home')} className='bg-white p-2 m-2 h-8 flex-row rounded-xl items-center justify-center' >
+                        <TouchableOpacity onPress={() => navigation.navigate('Cart')} className='bg-white p-2 m-2 h-8 flex-row rounded-xl items-center justify-center' >
                             <Image source={require("../../../assets/cart.png")} className='w-5 h-7 p-2' />
                             <View className='flex flex-col bg-[#F3EFFE] h-7 items-center justify-center '>
                                 <Text>

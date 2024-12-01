@@ -69,9 +69,6 @@ export default function BottomNavigator() {
             >
                 {() => <StandartNavigator component={GiftScreen} name="profile" logo />}
             </Tab.Screen>
-
         </Tab.Navigator>
     )
 }
-
-const styles = StyleSheet.create({})
